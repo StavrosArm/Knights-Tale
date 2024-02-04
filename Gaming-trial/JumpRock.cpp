@@ -8,7 +8,6 @@ void JumpRock::update(float dt)
 	float delta_time = dt/1000.f;
 	if (first_draw != 0) {
 		if (m_move_hor) {
-			//std::cout << "THE TIME THAT START" << graphics::getGlobalTime() << " " << time_of_draw << std::endl;
 			freq_move = 2.f * sinf(((graphics::getGlobalTime() - time_of_draw) / 2000.f))*delta_time;
 			m_pos_x -= freq_move;
 		}
