@@ -1,0 +1,38 @@
+x,y,width,height,path,hit_distanse,life,type
+-16.f, 2.8f, 0.7f, 1.8f,/ArcherHero/, 1.40, 1.5f,Archer
+18.f, 4.3f, 0.7f, 1.8f,/ArcherHero/, 1.40, 1.5f,Archer
+38.f, 6.3f, 0.7f, 1.8f,/ArcherHero/, 1.40, 1.5f,Archer
+43.f, -3.3f, 0.7f, 1.8f,/ArcherHero/, 1.40, 1.5f,Archer
+-5.f , 4.0f ,0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40, 2.0f,Skeleton
+6.f, 9.0f, 0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40,2.0f,Skeleton
+-5.f, 7.5f, 0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40, 2.0f,Skeleton
+5.f, 0.0, 0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40, 2.0f,Skeleton
+23.f, 9.1, 0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40, 2.0f,Skeleton
+38.f, 0.8, 0.7f, 0.8f,/skeleton_enemy/skeleton_enemy/, 1.40, 2.0f,Skeleton
+43.f, 2.3, 0.7f, 0.8f,/Bringer-Of-Death/, 1.40,3.f,DeathBringer
+-25.f, 9.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-24.f, 9.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-23.f, 9.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-22.f, 9.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-21.f, 9.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-25.f, 5.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-24.f, 5.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-23.f, 5.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-22.f, 5.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+-21.f, 5.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+4.f, -0.4f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+5.f, -0.4f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+6.f, -0.4f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+7.f, -0.4f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+36.f, 6.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+37.f, 6.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+38.f, 6.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+39.f, 6.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+40.f, 6.1f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 1.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 2.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 3.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 4.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 5.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 6.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin
+41.5f, 7.3f, 0.4f, 0.4f,0.0f,0.0f,0.0f,Coin

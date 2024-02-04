@@ -1,0 +1,28 @@
+x,y,width,height,move_horizontically,move_vertically,type
+5.f, 9.5f, 2.f,0.66f,false,false,JumpRock
+7.f, 6.8f, 2.f, 0.66f,false,false,JumpRock
+15.f, 10.5f, 2.f, 0.66f,true,false,JumpRock
+23.f, 3.8f, 4.f, 0.66f,false,false,JumpRock
+-23.f, 9.5f, 5.f, 0.66f,false,false,JumpRock
+-16.f, 7.5f, 5.f, 0.66f,false,false,JumpRock
+-23.f, 5.5f, 5.f, 0.66f,false,false,JumpRock
+18.f, 6.5f, 4.f, 0.66f,false,false,JumpRock
+-11.f, 1.5f, 5.f, 0.66f,false,false,JumpRock
+-16.3f, 2.f, 4.f, 0.66f,false,true,JumpRock
+-5.f, 4.0f, 5.f, 0.66f,false,false,JumpRock
+-5.f, 7.5f, 3.f, 0.66f,false,false,JumpRock
+9.5f, 1.5f, 2.f, 0.66f,false,true,JumpRock
+5.f,0.0, 4.f, 0.66f,false,false,JumpRock
+-30.f, 12.3f, 4.f, 0.66f,false,false,JumpRock
+-40.f,17.5f,1.4f,1.8f,false,false,FireTrap
+18.f, 11.5f, 4.f, 0.66f,false,false,JumpRock
+23.f, 9.3f, 4.f, 0.66f,false,false,JumpRock
+30.f, 10.5f, 4.f, 0.66f,false,false,JumpRock
+38.f, 6.5f, 4.f, 0.66f,false,false,JumpRock
+42.f, 8.5f, 2.f, 0.66f,true,false,JumpRock
+45.f,3.8f, 4.f, 0.66f,false,false,JumpRock
+50.f,-0.5f, 4.f, 0.66f,false,false,JumpRock
+30.f,1.f,4.0f,0.66f,false,false,JumpRock
+38.f,1.f, 4.f,0.66f,false,false,JumpRock
+54.f,1.8f, 2.f,0.66f,false,true,JumpRock
+43.f,-3.0f, 4.f, 0.66f,false,false,JumpRock
