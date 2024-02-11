@@ -7,8 +7,9 @@
 #include <chrono>
 
 
-/*Updating the arrow's position based on the angle calculated at the cration time (see below).In order for the arrow
-to take this path we need to add to the position in the x axis, with the cosine multiplied by a certain 
+/*Updating the arrow's position based on the angle calculated at the creation time (see below).
+In order for the arrow to take the angle aiming at the player
+We need to add to the arrow's position in the x axis , with the cosine multiplied by a certain 
 step, and the position in the y axis with the sine multiplied by a certain step 
 (multiplied by delta time of course)*/
 void Arrow::update(float dt)

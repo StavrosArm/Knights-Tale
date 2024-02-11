@@ -95,8 +95,8 @@ void GameState::drawStartScreen()
 	float w = getCanvasWidth();
 	float h = getCanvasHeight();
 
-	float offset_x = getCanvasWidth() / 2.0f; //m_state->m_global_offset_x;
-	float offset_y = getCanvasHeight() / 2.0f; //+ m_state->m_global_offset_y;
+	float offset_x = getCanvasWidth() / 2.0f; 
+	float offset_y = getCanvasHeight() / 2.0f; 
 
 	
 	
@@ -152,16 +152,15 @@ void GameState::drawWinScreen() {
 
 	
 
-	float offset_x = getCanvasWidth() / 2.0f; //m_state->m_global_offset_x;
-	float offset_y = getCanvasHeight() / 2.0f; //+ m_state->m_global_offset_y;
+	float offset_x = getCanvasWidth() / 2.0f; 
+	float offset_y = getCanvasHeight() / 2.0f; 
 
-	//std::cout << "win screen" << std::endl;
 	float w = getCanvasWidth();
 	float h = getCanvasHeight();
 
 	graphics::Brush m_brush_background;
 	m_brush_background.texture = m_win_screen[0];
-	//m_brush_background.texture = getFullAssetPath("Bridge 2.png");
+	m_brush_background.texture = getFullAssetPath("Bridge 2.png");
 	graphics::drawRect(offset_x, offset_y, w + 1.f, h + 1.f, m_brush_background);
 
 	graphics::Brush br2;

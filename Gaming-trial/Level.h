@@ -4,7 +4,6 @@
 #include "GameState.h"
 #include <list>
 #include "GameState.h"
-#include "Platform.h"
 #include "sword.h"
 
 /*

@@ -2,6 +2,9 @@
 #include "GameState.h"
 #include <iostream>
 
+
+/*We have three kind of enemies , with different attacks , and different animations.
+The thing they share in common that needs to be updated , is the damage given from the player.*/
 void Enemy::update(float dt)
 {
 	
@@ -14,6 +17,8 @@ void Enemy::update(float dt)
 	
 }
 
+/*Also , all enemies follow the player when the player is at a certain distance. This is 
+done in this function , responsible for changing the animations that are common for all enemies.*/
 void Enemy::followPlayer() 
 {	
 	

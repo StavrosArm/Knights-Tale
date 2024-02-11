@@ -2,10 +2,13 @@
 #include <iostream>
 
 
-/*The update function is responsible to change the animations of the archer based on the position of the player.An archer can shoot , 
-straight , up or down based on his position and the player's position. So we change the animations based on the player's 
-positions, and if the player is at a certain range we call the archer ancestor(enemy) to handle the attack.In additions we 
-update the archer arrows , and we check if any arrows are inactive in order to destroy them.*/
+/*The update function is responsible for changing the animations of the archer based on the position of the player.
+An archer can shoot at a straight line , looking up or looking down.The animations change based on the players 
+position.*/
+
+/*If the player is at a range that he can damage the archer we call the archer's ancestor(enemy) update
+to handle the life damage of the archer.
+In additions we update the archer arrows , and we check if any arrows are inactive in order to destroy them.*/
 void Archer::update(float dt)
 {
 	float delta_time = dt / 1000.f;
@@ -138,7 +141,7 @@ Archer::~Archer()
 }
 
 
-
+/*We call the garbage collector in order to erase the inactive arrows*/
 void Archer::GarbageCollection()
 {
 	auto it = m_arrows.begin();

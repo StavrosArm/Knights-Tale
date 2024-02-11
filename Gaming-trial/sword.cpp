@@ -23,8 +23,7 @@ void Sword::draw()
     graphics::resetPose();
 
     
-    
-    //graphics::drawText(x-5.f, y - 1.f,0.5f, text, m_brush_text);
+ 
    
 }
 

@@ -92,7 +92,7 @@ void Player::update(float dt)
 
 	if (isActive() && life <=0) 
 	{
-		int s = (int)fmodf(graphics::getGlobalTime() / 100.f, death_animations.size());
+		int s = (int)fmodf(graphics::getGlobalTime()/120.f, death_animations.size());
 		m_brush_player.texture = death_animations[s];
 		if (s == death_animations.size() - 1)
 		{

@@ -85,7 +85,7 @@ void Level::readDynamicFile(std::string dynamic_objects_file)
 void Level::readStaticFile(std::string static_objects_file)
 {
 	
-	//m_static_objects.push_back(dynamic_cast<GameObject*>(&m_platform));
+	
 	std::ifstream file(m_state->getFullAssetPath(static_objects_file));
 	if (!file.is_open()) {
 		std::cerr << "Error opening static objects file!" << std::endl;
@@ -141,7 +141,6 @@ void Level::update(float dt)
 		m_state->getPlayer()->update(dt);
 	}
 	
-	//m_platform.update(dt);
 	followPlayer();
 	checkCollisions();
 	GarbageCollection();
@@ -223,12 +222,7 @@ of dynamic objects with static ones.*/
 void Level::checkCollisions()
 {
 	float offset = 0.0f;
-	if (offset = m_state->getPlayer()->intersectDown(m_platform))
-	{
-		m_state->getPlayer()->m_pos_y += offset;
-		m_state->getPlayer()->m_vy = 0.0f;
 
-	}
 	/*Player with StaticObjects.Some JumpRocks can move through the canvas (as they don't have a specific time to live 
 	they are considered static objects). So in addition we check if the Player is intersecting with a moving objects , 
 	and tune the player's position according to the period the trigonometric function used for moving the object uses.*/
@@ -380,6 +374,11 @@ void Level::init()
 		
 		readStaticFile("static_objects_file.csv");
 		readDynamicFile("dynamic_objects_file.csv");
+
+		for (auto p_gob : m_static_objects)
+			if (p_gob) p_gob->init();
+		for (auto p_gob : m_dynamic_objects)
+			if (p_gob) p_gob->init();
 		
 		shop = new Shop(23.f, 1.9f, 3.0f, 3.0f, 3.f);
 		shop->init();
@@ -387,10 +386,7 @@ void Level::init()
 		sword = new Sword(50.f,-2.f,0.7f,0.8f);
 		sword->init();
 
-		for (auto p_gob : m_static_objects)
-			if (p_gob) p_gob->init();
-		for (auto p_gob : m_dynamic_objects)
-			if (p_gob) p_gob->init();
+		
 
 	}
 }

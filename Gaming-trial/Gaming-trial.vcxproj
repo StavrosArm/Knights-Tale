@@ -150,7 +150,6 @@
     <ClCompile Include="JumpRock.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Platform.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="skeleton.cpp" />
@@ -170,7 +169,6 @@
     <ClInclude Include="GameState.h" />
     <ClInclude Include="JumpRock.h" />
     <ClInclude Include="Level.h" />
-    <ClInclude Include="Platform.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="skeleton.h" />
