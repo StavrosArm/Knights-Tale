@@ -21,7 +21,6 @@ void Skeleton::update(float dt)
 			int s = (int)fmodf(graphics::getGlobalTime() / 100.f, m_attack_animations_left.size());
 			m_brush_enemy.texture = m_attack_animations_left[s];
 			m_state->getPlayer()->life -= m_damage;
-			//std::cout << "Line 29 at enemy.cpp" << m_state->getPlayer()->life<<std::endl;
 		}
 		else  if (m_state->getPlayer()->m_pos_x - m_pos_x >=0) {
 

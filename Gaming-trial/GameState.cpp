@@ -5,9 +5,9 @@
 #include <iostream>
 
 
-/*H GameState αποτελείται απο 4 οθόνες.Την αρχική , την level screen , το game over και το win.Έχουμε χρησιμοποι-
-ήσει έναν enumerator , για τις διαφορετικές περιπτώσεις.Όταν δημιουργείται ,by default το status=STATUS_START
-,και καλείται η ανάλογη update και ανάλογη draw. Mόλις ο χρήστης πατήσει enter ξεκινάει το παιχνίδι.*/
+/*H GameState Ξ±Ο€ΞΏΟ„ΞµΞ»ΞµΞ―Ο„Ξ±ΞΉ Ξ±Ο€ΞΏ 4 ΞΏΞΈΟΞ½ΞµΟ‚.Ξ¤Ξ·Ξ½ Ξ±ΟΟ‡ΞΉΞΊΞ® , Ο„Ξ·Ξ½ level screen , Ο„ΞΏ game over ΞΊΞ±ΞΉ Ο„ΞΏ win.ΞΟ‡ΞΏΟ…ΞΌΞµ Ο‡ΟΞ·ΟƒΞΉΞΌΞΏΟ€ΞΏΞΉ-
+Ξ®ΟƒΞµΞΉ Ξ­Ξ½Ξ±Ξ½ enumerator , Ξ³ΞΉΞ± Ο„ΞΉΟ‚ Ξ΄ΞΉΞ±Ο†ΞΏΟΞµΟ„ΞΉΞΊΞ­Ο‚ Ο€ΞµΟΞΉΟ€Ο„ΟΟƒΞµΞΉΟ‚.ΞΟ„Ξ±Ξ½ Ξ΄Ξ·ΞΌΞΉΞΏΟ…ΟΞ³ΞµΞ―Ο„Ξ±ΞΉ ,by default Ο„ΞΏ status=STATUS_START
+,ΞΊΞ±ΞΉ ΞΊΞ±Ξ»ΞµΞ―Ο„Ξ±ΞΉ Ξ· Ξ±Ξ½Ξ¬Ξ»ΞΏΞ³Ξ· update ΞΊΞ±ΞΉ Ξ±Ξ½Ξ¬Ξ»ΞΏΞ³Ξ· draw. MΟΞ»ΞΉΟ‚ ΞΏ Ο‡ΟΞ®ΟƒΟ„Ξ·Ο‚ Ο€Ξ±Ο„Ξ®ΟƒΞµΞΉ enter ΞΎΞµΞΊΞΉΞ½Ξ¬ΞµΞΉ Ο„ΞΏ Ο€Ξ±ΞΉΟ‡Ξ½Ξ―Ξ΄ΞΉ.*/
 GameState::GameState() {
 
 }
@@ -21,12 +21,11 @@ void GameState::updateStartScreen(float dt)
 	
 }
 
-/*Στην update του level , ελέγχουμε αν ο παίκτης είναι ενεργός , και δεν έχει πάρει το σπαθί , 
-και ανανεώνουμε την οθόνη. Άμα δεν είναι ενεργός κάνουμε update την game over . Τέλος , αν είναι ενεργός 
-και έχει πάρει το σπαθί αλλάζουμε το status σε STATUS_WIN*/
+/*Ξ£Ο„Ξ·Ξ½ update Ο„ΞΏΟ… level , ΞµΞ»Ξ­Ξ³Ο‡ΞΏΟ…ΞΌΞµ Ξ±Ξ½ ΞΏ Ο€Ξ±Ξ―ΞΊΟ„Ξ·Ο‚ ΞµΞ―Ξ½Ξ±ΞΉ ΞµΞ½ΞµΟΞ³ΟΟ‚ , ΞΊΞ±ΞΉ Ξ΄ΞµΞ½ Ξ­Ο‡ΞµΞΉ Ο€Ξ¬ΟΞµΞΉ Ο„ΞΏ ΟƒΟ€Ξ±ΞΈΞ― , 
+ΞΊΞ±ΞΉ Ξ±Ξ½Ξ±Ξ½ΞµΟΞ½ΞΏΟ…ΞΌΞµ Ο„Ξ·Ξ½ ΞΏΞΈΟΞ½Ξ·. Ξ†ΞΌΞ± Ξ΄ΞµΞ½ ΞµΞ―Ξ½Ξ±ΞΉ ΞµΞ½ΞµΟΞ³ΟΟ‚ ΞΊΞ¬Ξ½ΞΏΟ…ΞΌΞµ update Ο„Ξ·Ξ½ game over . Ξ¤Ξ­Ξ»ΞΏΟ‚ , Ξ±Ξ½ ΞµΞ―Ξ½Ξ±ΞΉ ΞµΞ½ΞµΟΞ³ΟΟ‚ 
+ΞΊΞ±ΞΉ Ξ­Ο‡ΞµΞΉ Ο€Ξ¬ΟΞµΞΉ Ο„ΞΏ ΟƒΟ€Ξ±ΞΈΞ― Ξ±Ξ»Ξ»Ξ¬Ξ¶ΞΏΟ…ΞΌΞµ Ο„ΞΏ status ΟƒΞµ STATUS_WIN*/
 void GameState::updateLevelScreen(float dt)
 {
-	
 	if (dt > 500)
 		return;
 
@@ -50,7 +49,7 @@ void GameState::updateLevelScreen(float dt)
 
 }
 
-/*Mόλις χάσει ο παίκτης , έχει την επιλογή να ξαναξεκινήσει το παιχνίδι ή να γυρίσει στο αρχικό μενού.*/
+/*MΟΞ»ΞΉΟ‚ Ο‡Ξ¬ΟƒΞµΞΉ ΞΏ Ο€Ξ±Ξ―ΞΊΟ„Ξ·Ο‚ , Ξ­Ο‡ΞµΞΉ Ο„Ξ·Ξ½ ΞµΟ€ΞΉΞ»ΞΏΞ³Ξ® Ξ½Ξ± ΞΎΞ±Ξ½Ξ±ΞΎΞµΞΊΞΉΞ½Ξ®ΟƒΞµΞΉ Ο„ΞΏ Ο€Ξ±ΞΉΟ‡Ξ½Ξ―Ξ΄ΞΉ Ξ® Ξ½Ξ± Ξ³Ο…ΟΞ―ΟƒΞµΞΉ ΟƒΟ„ΞΏ Ξ±ΟΟ‡ΞΉΞΊΟ ΞΌΞµΞ½ΞΏΟ.*/
 void GameState::updateFinalScreen(float dt)
 {
 	if (graphics::getKeyState(graphics::SCANCODE_RETURN)) {
@@ -70,8 +69,8 @@ void GameState::updateFinalScreen(float dt)
 	}
 }
 
-/*Άμα νικήσει ο παίκτης , μπορεί να γυρίσει στο αρχικό μενού. Σε κάθε περίπτωση ξανακάνουμε init , και διαγράφουμε
-το υπάρχον λέβελ.*/
+/*Ξ†ΞΌΞ± Ξ½ΞΉΞΊΞ®ΟƒΞµΞΉ ΞΏ Ο€Ξ±Ξ―ΞΊΟ„Ξ·Ο‚ , ΞΌΟ€ΞΏΟΞµΞ― Ξ½Ξ± Ξ³Ο…ΟΞ―ΟƒΞµΞΉ ΟƒΟ„ΞΏ Ξ±ΟΟ‡ΞΉΞΊΟ ΞΌΞµΞ½ΞΏΟ. Ξ£Ξµ ΞΊΞ¬ΞΈΞµ Ο€ΞµΟΞ―Ο€Ο„Ο‰ΟƒΞ· ΞΎΞ±Ξ½Ξ±ΞΊΞ¬Ξ½ΞΏΟ…ΞΌΞµ init , ΞΊΞ±ΞΉ Ξ΄ΞΉΞ±Ξ³ΟΞ¬Ο†ΞΏΟ…ΞΌΞµ
+Ο„ΞΏ Ο…Ο€Ξ¬ΟΟ‡ΞΏΞ½ Ξ»Ξ­Ξ²ΞµΞ».*/
 void GameState::updateWinScreen(float dt)
 {
 	
@@ -85,7 +84,7 @@ void GameState::updateWinScreen(float dt)
 	}
 }
 
-/*Ελέγχει το status και καλεί την ανάλογη update.*/
+/*Ξ•Ξ»Ξ­Ξ³Ο‡ΞµΞΉ Ο„ΞΏ status ΞΊΞ±ΞΉ ΞΊΞ±Ξ»ΞµΞ― Ο„Ξ·Ξ½ Ξ±Ξ½Ξ¬Ξ»ΞΏΞ³Ξ· update.*/
 void GameState::update(float dt)
 {
 	if (status == STATUS_START) {
@@ -101,7 +100,7 @@ void GameState::update(float dt)
 
 }
 
-/*Το draw του αρχικού μενού*/
+/*Ξ¤ΞΏ draw Ο„ΞΏΟ… Ξ±ΟΟ‡ΞΉΞΊΞΏΟ ΞΌΞµΞ½ΞΏΟ*/
 void GameState::drawStartScreen()
 {
 	float w = getCanvasWidth();
@@ -127,7 +126,7 @@ void GameState::drawStartScreen()
 	
 }
 
-/*Το draw της level*/
+/*Ξ¤ΞΏ draw Ο„Ξ·Ο‚ level*/
 void GameState::drawLevelScreen()
 {
 
@@ -147,7 +146,7 @@ void GameState::drawLevelScreen()
 
 }
 
-/*To draw της GameOver*/
+/*To draw Ο„Ξ·Ο‚ GameOver*/
 void GameState::drawFinalScreen() {
 	graphics::Brush br;
 	br.fill_color[0] = 1.0f;

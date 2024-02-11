@@ -5,7 +5,7 @@
 #include <iomanip>
 
 
-
+/*H movePlayer , ασχολείται με την αλλαγή του position του παίκτη και την αλλαγή των animations*/
 void Player::movePlayer(float dt)
 {	
 	float prev_pos_y = 0.0;
@@ -69,6 +69,7 @@ void Player::movePlayer(float dt)
 
 }
 
+/*H attack ασχολείται με την εναλλαγή των animations κατά την διάρκεια της μάχης.*/
 void Player::attack(float dt)
 {
 	float delta_time = dt / 1000.0f;
@@ -85,7 +86,9 @@ void Player::attack(float dt)
 	
 }
 
-
+/*Η update ελέγχει αν ο παίκτης έχει , αν δεν είναι, του ενημερώνει τα animations
+την Active απο το GameObject, αλλιώς ελέγχει αν έχει πατηθεί το space για να κάνει το attack και καλεί την 
+movePlayr()*/
 void Player::update(float dt)
 {
 	

@@ -313,7 +313,6 @@ void Level::checkCollisions()
 					if (offset = enemy->intersectDown(*StaticObject))
 					{
 
-						//std::cout << "line 126 at Level.cpp" << std::endl;
 						enemy->m_pos_y += offset;
 						if (Enemy* check = dynamic_cast<Enemy*>(p_gob_d))
 							check->m_vy = 0.0f;
@@ -403,11 +402,8 @@ void Level::draw()
 		float offset_x = m_state->getCanvasWidth()/2.0f + m_state->m_global_offset_x;
 		float offset_y = m_state->getCanvasHeight()/2.0f + m_state->m_global_offset_y;
 
-		//draw background
-		
-		//draw platform floor
 		graphics::drawRect(offset_x, offset_y, w * 5.f, h * 2.5f, m_brush_background);
-		//draw player if player is active
+		
 		shop->draw();
 		sword->draw();
 		if (m_state->getPlayer()) {

@@ -3,6 +3,8 @@
 #include "player.h"
 #include "cmath"
 
+
+/*O κάθε βράχος , γίνεται update μονο αν έχει κινηση προς τα πάνω ή προς τα κάτω (περιοδικη)*/
 void JumpRock::update(float dt)
 {
 	float delta_time = dt/1000.f;
@@ -45,12 +47,11 @@ void JumpRock::init()
 
 }
 
+/*Η draw του παίκτη μέσω του global offset*/
 void JumpRock::draw()
 {
 	float x = m_pos_x + m_state->m_global_offset_x;
 	float y = m_pos_y + m_state->m_global_offset_y;
-
-	//cout << "x,y : " << x << " " << y << endl;
 
 	graphics::drawRect(x, y, m_width+0.5f*m_width, JumpRocksize, m_jumprock_br);
 
