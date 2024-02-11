@@ -101,7 +101,7 @@ void GameState::update(float dt)
 
 }
 
-
+/*Το draw του αρχικού μενού*/
 void GameState::drawStartScreen()
 {
 	float w = getCanvasWidth();
@@ -127,6 +127,7 @@ void GameState::drawStartScreen()
 	
 }
 
+/*Το draw της level*/
 void GameState::drawLevelScreen()
 {
 
@@ -146,6 +147,7 @@ void GameState::drawLevelScreen()
 
 }
 
+/*To draw της GameOver*/
 void GameState::drawFinalScreen() {
 	graphics::Brush br;
 	br.fill_color[0] = 1.0f;
@@ -158,8 +160,6 @@ void GameState::drawFinalScreen() {
 }
 
 void GameState::drawWinScreen() {
-
-	
 
 	float offset_x = getCanvasWidth() / 2.0f; 
 	float offset_y = getCanvasHeight() / 2.0f; 

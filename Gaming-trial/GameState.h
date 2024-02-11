@@ -25,7 +25,7 @@ private:
 	void drawWinScreen();
 	void drawLevelScreen();
 	void drawFinalScreen();
-	void drawSword();
+	
 
 public:
 	std::vector<std::string> DecorationsPaths;
