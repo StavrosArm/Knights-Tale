@@ -1,5 +1,8 @@
 # A Knight's Tale 
 
+## Για τους εξεταστές , μπορείτε να βρείτε τον φάκελο των assets στον παρακάτω σύνδεσμο : https://drive.google.com/file/d/1O3HUD8XttKidKxvRfqSQhvjBRxEZIPvY/view?usp=sharing
+## Η εφαρμογή περιμένει να βρεί τα assets μέσα στο bin.
+
 The present repository presents a simple 2D platform game developed using the <a href="https://github.com/cgaueb/sgg">sgg library</a>.The game is written in C++ and it's aim is to showcase knowledge in memory management, good use of polymorphism and inheritance, as well as speed.
 
 ![Στιγμιότυπο οθόνης 2024-02-04 214510](https://github.com/StavrosArm/Knights-Tale/assets/75743598/e6a54b2e-9c49-4229-a61c-41d5e3c8b0d2)
