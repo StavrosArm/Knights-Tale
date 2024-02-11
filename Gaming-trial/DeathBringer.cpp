@@ -1,5 +1,7 @@
-#include "DeathBringer.h"
-
+﻿#include "DeathBringer.h"
+/*
+ O DeathBringer γενικά έχει παρόμοια συμπεριφορά με τον skeleton απλά επιπλέον όταν το life του μηδενίζεται σις γραμμές 9-16 κάνουμε ενεργοποιήση στα sprites του θανάτου του.
+*/
 void DeathBringer::update(float dt)
 {
 	float delta_time = dt / 1000.f;
