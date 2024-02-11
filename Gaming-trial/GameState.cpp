@@ -4,8 +4,12 @@
 #include <chrono>
 #include <iostream>
 
+
+/*H GameState αποτελείται απο 4 οθόνες.Την αρχική , την level screen , το game over και το win.Έχουμε χρησιμοποι-
+ήσει έναν enumerator , για τις διαφορετικές περιπτώσεις.Όταν δημιουργείται ,by default το status=STATUS_START
+,και καλείται η ανάλογη update και ανάλογη draw. Mόλις ο χρήστης πατήσει enter ξεκινάει το παιχνίδι.*/
 GameState::GameState() {
-	
+
 }
 
 void GameState::updateStartScreen(float dt)
@@ -17,6 +21,9 @@ void GameState::updateStartScreen(float dt)
 	
 }
 
+/*Στην update του level , ελέγχουμε αν ο παίκτης είναι ενεργός , και δεν έχει πάρει το σπαθί , 
+και ανανεώνουμε την οθόνη. ’μα δεν είναι ενεργός κάνουμε update την game over . Τέλος , αν είναι ενεργός 
+και έχει πάρει το σπαθί αλλάζουμε το status σε STATUS_WIN*/
 void GameState::updateLevelScreen(float dt)
 {
 	
@@ -43,6 +50,7 @@ void GameState::updateLevelScreen(float dt)
 
 }
 
+/*Mόλις χάσει ο παίκτης , έχει την επιλογή να ξαναξεκινήσει το παιχνίδι ή να γυρίσει στο αρχικό μενού.*/
 void GameState::updateFinalScreen(float dt)
 {
 	if (graphics::getKeyState(graphics::SCANCODE_RETURN)) {
@@ -62,6 +70,8 @@ void GameState::updateFinalScreen(float dt)
 	}
 }
 
+/*’μα νικήσει ο παίκτης , μπορεί να γυρίσει στο αρχικό μενού. Σε κάθε περίπτωση ξανακάνουμε init , και διαγράφουμε
+το υπάρχον λέβελ.*/
 void GameState::updateWinScreen(float dt)
 {
 	
@@ -75,6 +85,7 @@ void GameState::updateWinScreen(float dt)
 	}
 }
 
+/*Ελέγχει το status και καλεί την ανάλογη update.*/
 void GameState::update(float dt)
 {
 	if (status == STATUS_START) {
@@ -90,6 +101,7 @@ void GameState::update(float dt)
 
 }
 
+
 void GameState::drawStartScreen()
 {
 	float w = getCanvasWidth();
@@ -97,9 +109,6 @@ void GameState::drawStartScreen()
 
 	float offset_x = getCanvasWidth() / 2.0f; 
 	float offset_y = getCanvasHeight() / 2.0f; 
-
-	
-	
 	
 	graphics::Brush m_brush_background;
 	m_brush_background.texture = bridge[0];
