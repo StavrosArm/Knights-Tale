@@ -1,9 +1,14 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include "GameObject.h"
 #include "box.h"
 #include "player.h"
 #include <sgg/graphics.h>
+
+/*
+	Με σκόπο να γίνει χρήση της κληρονομικότητας όσον αφόρα τα στατικά αντικείμενα δημιουργήσαμε την κλάση staticObj η οποία έχει 
+	ένα δύο brushes . Ένα για το main draw και ένα για το debug mode.
+*/
 
 class staticObj :public Box, public GameObject
 {

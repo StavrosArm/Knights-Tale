@@ -1,4 +1,4 @@
-#include "staticObj.h"
+﻿#include "staticObj.h"
 #include "GameState.h"
 
 void staticObj::update(float dt)
@@ -8,6 +8,10 @@ void staticObj::update(float dt)
 void staticObj::drawDebug()
 {
 }
+
+/*
+Στην init αρχικοποίουμε τις σχεδιαστικές ιδιότητες των δύο brushes
+*/
 
 void staticObj::init()
 {
@@ -23,6 +27,10 @@ void staticObj::init()
 	m_staticObj_br_debug.outline_color[2] = 0.1f;
 }
 
+/*
+Στην draw κάθε φόρα προσθέτουμε στο x,y την απόσταση του player από το κέντρο και κάνουμε draw το στατικό αντικείμενο
+*/
+
 void staticObj::draw()
 {
 	float x = m_pos_x + m_state->m_global_offset_x;
@@ -33,7 +41,9 @@ void staticObj::draw()
 	if (m_state->m_debugging)
 		graphics::drawRect(x, y, m_width, m_height, m_staticObj_br_debug);
 }
-
+/*
+Ο κατασκευαστής λειτουργεί κληρονομικά καλώντας τον κατασκευαστή του προγόνου Box μέσα στην λίστα αρχικοποιήσης.
+*/
 staticObj::staticObj(float x, float y, float width, float height,float staticObjSize):Box(x,y,width,height)
 {
 	m_staticObj_size = staticObjSize;

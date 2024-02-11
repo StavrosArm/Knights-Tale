@@ -1,6 +1,10 @@
-#include "Shop.h"
+﻿#include "Shop.h"
 
 
+/*
+	Η παρακάτω μέθοδος ορίζει ουσιαστικά τα αρχικό κομμάτι του διαλόγου από το shop προς τον παίχτη.Δίνεται στον player η δυνατότητα 
+	να επιλέψει αν θέλει να αγοράσει κάτι πατώντας [Y,N]
+*/
 
 void Shop::SetStartMenuStats() 
 {
@@ -10,6 +14,13 @@ void Shop::SetStartMenuStats()
 	m_dialog_string2 = "";
 	m_dialogButton = "StartMenu";
 }
+
+/*
+	Σε περίπτωση που πατήσει Y εμφανίζονται στην οθόνη 3 επιλογές από τις οποίες οι πρώτες δύο παρέχουν στον player ζωή και damage 
+	και η τρίτη επιλογή είναι να παεί πίσω στην αρχή του διαλόγου.Ο χρήστης μπορεί να πατήσει 1,2,3 αντίστοιχα για τις επιλογές που 
+	προαναφερθηκαν.
+*/
+
 void Shop::SetMainMenuStats()
 {
 	m_dialog_sting = "1 life -> 50 coins | Press 1";
@@ -20,22 +31,12 @@ void Shop::SetMainMenuStats()
 	Press1Allowed = true;
 	Press2Allowed = true;
 }
-void Shop::SetElseMenuStats() 
-{
-	m_text_x = m_state->getCanvasWidth() / 2.0f - 4.0;
-	m_dialog_string1 = " ";
-	m_dialog_string2 = " ";
-	m_dialog_sting = "Do you want to buy something else? [Y,N]";
-	m_dialogButton = "ElseMenu";
-}
-void Shop::SetPreLastMenuStats()
-{
-	m_dialog_sting = "Bye Bye my friend!!";
-	m_text_x = m_state->getCanvasWidth() / 2.0f - 1.8f;
-	m_dialog_string1 = "";
-	m_dialog_string2 = "Go Back | Press 3";
-	m_dialogButton = "PreLastMenu";
-}
+
+/*
+	Σε περίπτωση που πατήσει Ν έχει τελειώσει η συναλλαγή αλλά του δίνεται η επιλογή να κάνει return στο προηγούμενο part του
+	διαλόγου πατώντας 3.
+*/
+
 void Shop::SetLastMenuStats()
 {
 	m_dialog_sting = "Bye Bye my friend!!";
@@ -44,6 +45,41 @@ void Shop::SetLastMenuStats()
 	m_dialog_string2 = "Go Back | Press 3";
 	m_dialogButton = "LastMenu";
 }
+
+/*
+	Σε περίπτωση που πατήσει 1 ή 2 ο διάλογος συνέχιζει δίνοντας στον player την επιλογή να επιλέξει αν θέλει να αγοράσει κάτι αλλό
+	πατώντας [Y,N] .
+*/
+
+void Shop::SetElseMenuStats() 
+{
+	m_text_x = m_state->getCanvasWidth() / 2.0f - 4.0;
+	m_dialog_string1 = " ";
+	m_dialog_string2 = " ";
+	m_dialog_sting = "Do you want to buy something else? [Y,N]";
+	m_dialogButton = "ElseMenu";
+}
+
+/*
+	Σε περίπτωση που πατήσει Ν έχει τελειώσει η συναλλαγή αλλά του δίνεται η επιλογή να κάνει return στο προηγούμενο part του 
+	διαλόγου πατώντας 3.
+*/
+
+void Shop::SetPreLastMenuStats()
+{
+	m_dialog_sting = "Bye Bye my friend!!";
+	m_text_x = m_state->getCanvasWidth() / 2.0f - 1.8f;
+	m_dialog_string1 = "";
+	m_dialog_string2 = "Go Back | Press 3";
+	m_dialogButton = "PreLastMenu";
+}
+
+
+/*
+	Ο διάλογος ξεκίναει όταν Ο Player τοποθετηθεί ακριβώς στο κέντρο του shop . Επείτα χρησιμοποιώντας τις μεθόδους που έχουμε 
+	υλοποιήσει παραπάνω θέτει τις σωστές φράσεις αναλόγως το κουμπί που θα πατήσει ο χρήστης . Στο συγκεκρίμενο part γίνεται χρήση
+	της μεθόδου (graphics::getKeyState()).
+*/
 
 void Shop::update(float dt)
 {
